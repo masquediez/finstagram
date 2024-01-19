@@ -1,0 +1,136 @@
+body{
+    margin: 0px;
+}
+
+.home {
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo{
+    height: 2em;
+    padding: 20px;
+        
+}
+
+.anmelden {
+    /* background-color: blue; */
+    padding: 10%;
+    margin: 10%;
+    background-color: #12caf8;
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(0, 0, 0)
+}
+
+.registrieren {
+    /* background-color: aquamarine; */
+    padding: 10%;
+    margin: 10%;
+    background-color: #12caf8;
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(255, 0, 0)
+}
+
+.nav-buttons {
+
+    display: flex;
+    justify-content: flex-end;  
+}
+
+.post{
+    height:200px;
+    width:200px;
+}
+
+#navbar {
+    top : 0;
+    /* font-size: 1.25em; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0816dd;
+    position: sticky;
+    border-bottom: solid #008cff;
+    align-items: stretch
+}
+
+.profil {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: yellow; */
+}
+
+.profil-kram{
+    /* background-color: purple; */
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px
+}
+
+.profil-bild {
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%
+    /* margin-top: 50px;  */
+}
+
+.profil-bild-img {
+    height: 150px;
+    width: 150px;
+}
+
+.profil-info {
+    display: flex;
+    text-align: center;
+    
+    /* background-color: red; */
+}
+
+.profil-stats {
+    display:flex;
+    width: 100%
+    margin-top: 20px;
+    /* background-color: aquamarine; */
+}
+
+.profil-bio {
+    /* background-color: green; */
+}
+
+.flexbox{
+    display:flex;
+    justify-content: center;
+
+}
+
+.stat{
+    margin-right: 10px;
+}
+
+.gallery{
+    background-color: #ff0000;
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.column{
+    margin-top: 2px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.gallery-img{
+    width: 32%;
+    height: 30x;
+    padding: 1px;
+}
