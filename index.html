@@ -17,7 +17,7 @@
                 <a class="registrieren" href="http://127.0.0.1:3000/index.html"> registrieren </a>
             </div>
         </nav>
-        <!-- Profil -->
+                 <!-- Profil -->
         <div class="flexbox">
             <div class="profil">
                 <div class="profil-bild">
@@ -45,8 +45,70 @@
                 </div>
             </div>
         </div>
-        <!-- Gallery -->
-        <div class="gallery">
+                     <!-- Gallery -->
+        <div class="galeria">
+            <div id="loading">Loading...</div>
+            <div id="imageGrid"></div>
+
+        
+            <script>
+            
+                var jsonData = {
+                images: [
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+                    'https://www.mainz.de/freizeit-und-sport/sportpreis-2023.php.media/278798/AdobeStock_JJAVA-4437974.jpeg.scaled/856e0b48f5c9a3bb0c545993575e013a.jpg',
+
+                ]
+                };
+            
+
+                function simulateDatabaseQuery(callback) {
+                // Simuliere eine Datenbankabfrage mit einem Timeout von 2 Sekunden
+                setTimeout(callback, 2000);
+                }
+
+                function loadImages() {
+                var loadingDiv = document.getElementById('loading');
+                var imageGrid = document.getElementById('imageGrid');
+
+                // Zeige den Ladebildschirm an
+                loadingDiv.style.display = 'block';
+
+                // Simuliere die Datenbankabfrage
+                simulateDatabaseQuery(function () {
+                    // Verstecke den Ladebildschirm nach der Datenbankabfrage
+                    loadingDiv.style.display = 'none';
+
+                    // Iteriere durch die Bild-URLs im JSON-Objekt
+                    jsonData.images.forEach(function (imageUrl) {
+                    var imageContainer = document.createElement('div');
+                    imageContainer.className = 'image-container';
+
+                    var imageElement = document.createElement('img');
+                    imageElement.src = imageUrl;
+
+                    imageContainer.appendChild(imageElement);
+                    imageGrid.appendChild(imageContainer);
+                    });
+                });
+                }
+            
+                document.addEventListener('DOMContentLoaded', loadImages);
+
+
+            </script>
+        </div> 
+        <!-- <div class="gallery">
             <div class="column">
                 <img class="gallery-img" src="imagenes\Screenshot 2024-01-12 001204.png">
                 <img class="gallery-img" src="imagenes\parametros de comparacion.png">
@@ -74,6 +136,6 @@
             <div class="column">
                 
             </div>
-        </div>
+        </div> -->
     </body>
 </html>

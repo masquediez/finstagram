@@ -121,7 +121,7 @@ body{
 }
 
 .gallery{
-    background-color: #ff0000;
+    background-color: blue;
     display:flex;
     flex-basis:20rem;
     flex-grow: 1;
@@ -137,7 +137,29 @@ body{
 .gallery-img{
     display:flex;
     justify-content:center;
-    width: 32.5%;
-    height: 30x;
+    flex-wrap: wrap;
+    max-width: 32.5%;
+    min-width: 10%;
+    height: 20x;
     padding: 1px;
+}
+
+@media only screen and (max-width: 992px {
+    .gallery {
+        background-color: rgb(0, 255, 119);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .gallery {
+        background-color: rgb(246, 255, 0);
+    }
+}
+@media only screen and (min-width: 600px) {
+    .gallery {
+        background-color: blue;
+    }
+}
+
+.loadImages{
+    background-color:#0816dd;
 }
